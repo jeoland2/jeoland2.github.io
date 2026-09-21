@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国产数码相机-专业评测、选购指南与摄影器材推荐</title>
+    <meta name="description" content="本站为您提供最新的国产数码相机品牌评测、参数对比及选购指南。涵盖大疆、海信、哈苏、荣耀、一加等品牌的产品线解析，从入门到专业级全画幅机型推荐，助您选择最适合的摄影器材。">
+    <meta name="keywords" content="国产数码相机,大疆相机,海信相机,哈苏相机,荣耀相机,一加相机,国产相机评测,摄影器材选购">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --highlight-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: 1px solid #ddd;
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-tag {
+            background: rgba(255,255,255,0.15);
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        /* Main Content Layout */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 32px;
+        }
+
+        /* Section Styles */
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-left: 12px;
+            border-left: 4px solid var(--accent-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-more {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .section-more:hover {
+            color: var(--accent-color);
+        }
+
+        /* Featured Grid */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-color: #e0e0e0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--highlight-color);
+            color: white;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .card-content {
+            padding: 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+        }
+
+        .card-price {
+            color: var(--highlight-color);
+            font-weight: 700;
+        }
+
+        /* Guide List */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .guide-item {
+            background: var(--card-bg);
+            padding: 16px;
+            border-radius: var(--border-radius);
+            border-left: 3px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .guide-item:hover {
+            border-left-color: var(--accent-color);
+        }
+
+        .guide-item h3 {
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .guide-item p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Brand Grid */
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .brand-card {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            transition: background 0.2s;
+        }
+
+        .brand-card:hover {
+            background-color: #f0f7ff;
+        }
+
+        .brand-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .brand-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Comparison Table */
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 14px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: #fafafa;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            margin-bottom: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 16px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--card-bg);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.2rem;
+            color: var(--accent-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #fafafa;
+        }
+
+        .faq-answer p {
+            padding: 16px 20px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                height: auto;
+                padding: 12px;
+                gap: 10px;
+            }
+            
+            nav ul {
+                gap: 16px;
+                font-size: 0.9rem;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .brand-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                国产数码相机<span>指南</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#brands">品牌</a></li>
+                    <li><a href="#guides">选购指南</a></li>
+                    <li><a href="#reviews">深度评测</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">🔍 搜索</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>探索国产影像的崛起</h1>
+        <p>从大疆Action到哈苏全画幅，深入了解中国品牌在数码相机领域的技术突破与产品线布局。</p>
+        <div class="hero-tags">
+            <span class="hero-tag">#运动相机</span>
+            <span class="hero-tag">#手机影像</span>
+            <span class="hero-tag">#专业相机</span>
+            <span class="hero-tag">#摄影配件</span>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Main Content -->
+        <main>
+            <!-- Brands Section -->
+            <section id="brands">
+                <div class="section-title">
+                    主流品牌概览
+                    <a href="#" class="section-more">查看全部 &rarr;</a>
+                </div>
+                <div class="brand-grid">
+                    <div class="brand-card">
+                        <span class="brand-name">大疆 DJI</span>
+                        <p class="brand-desc">全球运动相机与无人机影像霸主，以Action系列和Osmo系列著称。</p>
+                    </div>
+                    <div class="brand-card">
+                        <span class="brand-name">海信 Hisense</span>
+                        <p class="brand-desc">布局手机与智能终端影像系统，近期涉足专业相机镜头领域。</p>
+                    </div>
+                    <div class="brand-card">
+                        <span class="brand-name">哈苏 Hasselblad</span>
+                        <p class="brand-desc">中国手机厂商收购的瑞典品牌，将中画幅技术带入移动摄影。</p>
+                    </div>
+                    <div class="brand-card">
+                        <span class="brand-name">荣耀 Honor</span>
+                        <p class="brand-desc">主打人像摄影与多摄系统，影像算法在手机圈表现优异。</p>
+                    </div>
+                    <div class="brand-card">
+                        <span class="brand-name">一加 OnePlus</span>
+                        <p class="brand-desc">注重哈苏联合调校，在色彩科学和视频录制上拥有独特风格。</p>
+                    </div>
+                    <div class="brand-card">
+                        <span class="brand-name">小米 Xiaomi</span>
+                        <p class="brand-desc">涵盖旗舰手机影像、徕卡合作以及庞大的配件生态链。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Products -->
+            <section id="reviews">
+                <div class="section-title">
+                    热门机型推荐
+                    <a href="#" class="section-more">阅读评测 &rarr;</a>
+                </div>
+                <div class="featured-grid">
+                    <article class="card">
+                        <div class="card-image">
+                            <span class="card-badge">新品</span>
+                            <img src="https://picsum.photos/seed/camera1/400/300" alt="DJI Action 5 Pro">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">大疆 Action 5 Pro：续航与画质的双重飞跃</h3>
+                            <p class="card-excerpt">新增10-bit色彩与45fps录制，电池容量大幅提升，是极限运动的理想选择。</p>
+                            <div class="card-meta">
+                                <span>2023-10-15</span>
+                                <span class="card-price">¥2,599</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/camera2/400/300" alt="荣耀Magic6 Pro">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">荣耀Magic6 Pro：鹰眼相机与巨犀玻璃</h3>
+                            <p class="card-excerpt">针对抓拍场景优化，配合青海湖电池技术，续航表现超越同级竞品。</p>
+                            <div class="card-meta">
+                                <span>2024-01-12</span>
+                                <span class="card-price">¥5,999</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <span class="card-badge">专业</span>
+                            <img src="https://picsum.photos/seed/camera3/400/300" alt="海信Vidda C1">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">海信Vidda C1：家用投影仪的影像新选择</h3>
+                            <p class="card-excerpt">主打护眼显示与色彩还原，将家用娱乐设备的画质提升至电影级。</p>
+                            <div class="card-meta">
+                                <span>2023-08-20</span>
+                                <span class="card-price">¥3,499起</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Comparison Table -->
+            <section id="comparison">
+                <div class="section-title">参数对比：主流国产机型一览</div>
+                <div class="comparison-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>品牌/型号</th>
+                                <th>主要定位</th>
+                                <th>传感器尺寸</th>
+                                <th>核心优势</th>
+                                <th>参考价格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>大疆 Action 5 Pro</td>
+                                <td>运动相机</td>
+                                <td>1/1.3英寸</td>
+                                <td>续航长、防水强、防抖好</td>
+                                <td>¥2,599</td>
+                            </tr>
+                            <tr>
+                                <td>荣耀 Magic6 Pro</td>
+                                <td>旗舰手机</td>
+                                <td>1/1.3英寸 (潜望)</td>
+                                <td>抓拍快、续航久、护眼</td>
+                                <td>¥5,999</td>
+                            </tr>
+                            <tr>
+                                <td>一加 12</td>
+                                <td>旗舰手机</td>
+                                <td>1/1.4英寸 (主摄)</td>
+                                <td>哈苏色彩、长焦素质高</td>
+                                <td>¥4,599</td>
+                            </tr>
+                            <tr>
+                                <td>海信 Vidda C1</td>
+                                <td>家用投影</td>
+                                <td>LED/LCOS</td>
+                                <td>护眼、高对比度、音质好</td>
+                                <td>¥3,499</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Buying Guide -->
+            <section id="guides">
+                <div class="section-title">选购指南</div>
+                <div class="guide-list">
+                    <article class="guide-item">
+                        <h3>如何选择运动相机？</h3>
+                        <p>如果您主要进行潜水、滑雪或骑行，建议选择具备防水功能且电池续航长的机型。大疆Action系列是目前市场上的标杆，但小米和影石Insta360也在逐渐缩小差距。</p>
+                    </article>
+                    <article class="guide-item">
+                        <h3>国产手机影像是否值得信赖？</h3>
+                        <p>国产手机影像系统在过去两年取得了巨大进步，特别是在长焦拍摄和人像虚化上。荣耀和一加与哈苏的合作提升了色彩科学，而小米与徕卡的合作则带来了经典的光影效果。</p>
+                    </article>
+                    <article class="guide-item">
+                        <h3>从入门到专业：国产相机推荐路线</h3>
+                        <p>目前国产相机主要集中在手机和运动/航拍领域。专业单反/无反市场暂未形成完整产业链，建议关注具备潜望式长焦和超广角的高端手机，它们在便携性和功能上已接近入门微单。</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="section-title">热门话题</div>
+            <ul style="display: flex; flex-direction: column; gap: 10px;">
+                <li><a href="#" style="font-size: 0.95rem; display: block; padding: 8px 0; border-bottom: 1px dashed #eee;">国产影像技术突破解析</a></li>
+                <li><a href="#" style="font-size: 0.95rem; display: block; padding: 8px 0; border-bottom: 1px dashed #eee;">2024年最佳国产手机推荐</a></li>
+                <li><a href="#" style="font-size: 0.95rem; display: block; padding: 8px 0; border-bottom: 1px dashed #eee;">大疆Action 5 Pro vs Insta360 X4</a></li>
+                <li><a href="#" style="font-size: 0.95rem; display: block; padding: 8px 0; border-bottom: 1px dashed #eee;">手机摄影构图技巧大全</a></li>
+                <li><a href="#" style="font-size: 0.95rem; display: block; padding: 8px 0;">如何保护相机镜头防刮花</a></li>
+            </ul>
+
+            <div class="section-title" style="margin-top: 30px;">常见问题 (FAQ)</div>
+            <div class="faq-item">
+                <div class="faq-question">国产相机品牌有哪些？</div>
+                <div class="faq-answer">
+                    <p>目前市面上主流的国产数码影像品牌包括大疆（DJI）、荣耀、一加、海信（Vidda）、小米以及被中国企业收购的哈苏等。它们主要分布在运动相机、手机影像和智能显示设备领域。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">国产手机拍照效果好吗？</div>
+                <div class="faq-answer">
+                    <p>非常出色。国产旗舰手机在传感器尺寸、光学防抖（OIS）、长焦变焦以及影像算法上都有显著提升。例如荣耀的鹰眼相机和大疆的云台防抖技术，在特定场景下表现甚至优于部分入门级微单。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何辨别国产相机的真伪？</div>
+                <div class="faq-answer">
+                    <p>建议通过官方授权渠道购买，并查验包装盒上的序列号。对于大疆等品牌，可以通过其官方App进行设备绑定和验证。</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="font-size: 0.9rem; line-height: 1.6;">专注于国产数码影像设备的深度评测与资讯分享，致力于为摄影爱好者提供最客观、专业的选购参考。</p>
+            </div>
+            <div class="footer-col">
+                <h4>热门分类</h4>
+                <ul>
+                    <li><a href="#">运动相机</a></li>
+                    <li><a href="#">旗舰手机</a></li>
+                    <li><a href="#">摄影配件</a></li>
+                    <li><a href="#">无人机</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">购买指南</a></li>
+                    <li><a href="#">保修政策</a></li>
+                    <li><a href="#">联系客服</a></li>
+                    <li><a href="#">意见反馈</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 国产数码相机指南 版权所有</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                // Close others
+                document.querySelectorAll('.faq-item').forEach(child => {
+                    if (child !== parent) child.classList.remove('active');
+                });
+                // Toggle current
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+                  </html>
