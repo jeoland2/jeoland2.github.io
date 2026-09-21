@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="街头汉堡王 - 专注于街头美食文化的汉堡品牌。提供经典皇堡、香辣鸡腿堡及特色小食的详细测评、制作技巧与街头美食探索指南。">
+    <meta name="keywords" content="街头汉堡王, 汉堡推荐, 皇堡测评, 街头美食, 快餐指南, 汉堡制作">
+    <title>街头汉堡王-经典汉堡测评与街头美食探索指南</title>
+    <style>
+        :root {
+            --primary-color: #d91818; /* 汉堡王红 */
+            --secondary-color: #2b2b2b; /* 深炭黑 */
+            --accent-color: #f8c800; /* 金黄点缀 */
+            --bg-color: #f4f4f4;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: #b01515;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/burgerking/1600/900') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-btn {
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(248, 200, 0, 0.4);
+        }
+
+        /* 热门系列 */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .card-desc {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .rating {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .view-btn {
+            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* 评测榜单 */
+        .ranking-section {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .ranking-section .section-header h2 {
+            color: white;
+        }
+
+        .ranking-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            transition: background 0.2s;
+        }
+
+        .ranking-item:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .rank-num {
+            font-size: 32px;
+            font-weight: 800;
+            color: rgba(255,255,255,0.2);
+            margin-right: 20px;
+            min-width: 40px;
+        }
+
+        .rank-content {
+            flex: 1;
+        }
+
+        .rank-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .rank-desc {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .rank-score {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        /* 街头美食文化 */
+        .culture-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .culture-text h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .culture-text p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .culture-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .culture-image img {
+            width: 100%;
+            display: block;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            font-size: 15px;
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #1a1a1a;
+            color: #999;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.8;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .culture-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-brand p {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L9 9H3L7 14L5 21L12 17L19 21L17 14L21 9H15L12 2Z" fill="#d91818"/>
+                </svg>
+                街头<span>汉堡王</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#products">招牌汉堡</a>
+                <a href="#ranking">口味榜单</a>
+                <a href="#culture">街头文化</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <a href="#" class="cta-btn">探索菜单</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>还原街头最纯粹的肉食快乐</h1>
+                <p>深入挖掘街头汉堡王文化，从经典皇堡到创意特调，为您提供最硬核的汉堡测评、制作技巧与美食指南。</p>
+                <a href="#products" class="hero-btn">开始探索</a>
+            </div>
+        </section>
+
+        <!-- 热门产品 -->
+        <section id="products" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>街头必尝招牌</h2>
+                    <p>精选最受欢迎的街头汉堡单品，带你重温那个充满烟火气的味道</p>
+                </div>
+                <div class="grid-3">
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/burger1/400/300" alt="皇堡特写" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">经典之选</span>
+                            <h3 class="card-title">双层皇堡</h3>
+                            <p class="card-desc">100%纯牛肉饼，搭配新鲜生菜、番茄、洋葱和独家秘制酱料，还原街头最原始的肉香。</p>
+                            <div class="card-footer">
+                                <span class="rating">★★★★★</span>
+                                <a href="#" class="view-btn">查看详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/burger2/400/300" alt="香辣鸡腿堡" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">香辣风味</span>
+                            <h3 class="card-title">香辣鸡腿堡</h3>
+                            <p class="card-desc">外酥里嫩的香辣鸡腿肉，搭配清爽的卷心菜丝，辣味与酸爽在舌尖完美碰撞。</p>
+                            <div class="card-footer">
+                                <span class="rating">★★★★☆</span>
+                                <a href="#" class="view-btn">查看详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/burger3/400/300" alt="安格斯厚牛堡" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">品质升级</span>
+                            <h3 class="card-title">安格斯厚牛堡</h3>
+                            <p class="card-desc">厚切牛肉饼，多汁饱满，搭配焦糖洋葱和切达芝士，口感层次丰富，满足感爆棚。</p>
+                            <div class="card-footer">
+                                <span class="rating">★★★★★</span>
+                                <a href="#" class="view-btn">查看详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 口味榜单 -->
+        <section id="ranking" class="section ranking-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>街头口味热度榜</h2>
+                    <p>基于本地食客评价整理的街头汉堡口味排行榜</p>
+                </div>
+                <div class="ranking-list">
+                    <div class="ranking-item">
+                        <div class="rank-num">1</div>
+                        <div class="rank-content">
+                            <div class="rank-title">巨无霸香辣鸡腿堡</div>
+                            <div class="rank-desc">街头最火爆单品，双重肉饼双重满足，辣度适中。</div>
+                        </div>
+                        <div class="rank-score">9.8</div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="rank-num">2</div>
+                        <div class="rank-content">
+                            <div class="rank-title">香辣鸡翅套餐</div>
+                            <div class="rank-desc">搭配薯条与可乐的黄金组合，酥脆外皮与嫩滑肉质。</div>
+                        </div>
+                        <div class="rank-score">9.6</div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="rank-num">3</div>
+                        <div class="rank-content">
+                            <div class="rank-title">原味鸡块</div>
+                            <div class="rank-desc">街头夜宵必备，一口一个，多汁不油腻。</div>
+                        </div>
+                        <div class="rank-score">9.4</div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="rank-num">4</div>
+                        <div class="rank-content">
+                            <div class="rank-title">菠萝皇堡</div>
+                            <div class="rank-desc">酸甜菠萝肉与牛肉的奇妙碰撞，清新解腻。</div>
+                        </div>
+                        <div class="rank-score">9.2</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 街头文化 -->
+        <section id="culture" class="section">
+            <div class="container">
+                <div class="culture-grid">
+                    <div class="culture-text">
+                        <h2>不仅仅是汉堡，更是街头文化符号</h2>
+                        <p>在街头巷尾，汉堡王不仅仅是一个快餐品牌，它代表着一种快节奏的生活方式和年轻化的社交氛围。从深夜食堂到周末聚会，街头汉堡王始终伴随着人们的快乐时光。</p>
+                        <p>我们致力于还原街头最真实的烹饪温度，保留传统汉堡的精髓，同时融入现代饮食的健康理念。每一份汉堡背后，都是对食材品质的严格把控和对制作工艺的精益求精。</p>
+                        <a href="#" class="cta-btn" style="margin-top: 20px;">了解更多文化</a>
+                    </div>
+                    <div class="culture-image">
+                        <img src="https://picsum.photos/seed/streetfood/600/400" alt="街头美食场景">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section" style="background-color: #fff;">
+            <div class="container" style="max-width: 800px;">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于街头汉堡王，您可能关心的这些问题</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">街头汉堡王使用的是什么肉？</div>
+                    <div class="faq-answer">我们坚持使用100%纯牛肉，拒绝肉糜填充，确保每一口都能吃到真实的肉感。</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">如何找到附近的街头汉堡王门店？</div>
+                    <div class="faq-answer">您可以访问我们的官网，使用地图定位功能查找离您最近的店铺，并查看实时营业状态。</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">提供外卖服务吗？</div>
+                    <div class="faq-answer">是的，街头汉堡王支持主流外卖平台配送，确保您在街头也能享受热腾腾的美味。</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">有哪些适合儿童的套餐？</div>
+                    <div class="faq-answer">我们提供专门的儿童欢乐餐，包含迷你汉堡、薯条和儿童玩具，让孩子吃得开心。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>街头汉堡王</h3>
+                    <p>致力于还原街头最纯粹的肉食快乐，为您带来高品质、高性价比的汉堡体验。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>探索</h4>
+                    <ul>
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">门店列表</a></li>
+                        <li><a href="#">最新活动</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">营养信息</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注</h4>
+                    <ul>
+                        <li><a href="#">官方微博</a></li>
+                        <li><a href="#">微信公众号</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 街头汉堡王 版权所有. 本网站为概念演示，非真实商业站点。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+
+    <script>
+        // 简单的 FAQ 交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项状态
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
